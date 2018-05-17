@@ -1,0 +1,24 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.profile{
+  height: calc(100% - 30px);
+  width: 100%;
+  padding-top: 30px;
+}
+
+.profile > .img-profile{
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile > .know-profile{
+  text-align: center;
+}

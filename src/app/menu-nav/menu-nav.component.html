@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="true">
+
+    <mat-toolbar color="primary" style="height: 200px">
+      <div class="profile">
+        <img class="img-profile" src="../../assets/profile.svg"/>
+        <p class="know-profile">@anonimous</p>
+      </div>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item href="#">Sign in</a>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="!isOpened">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Agenda</span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
